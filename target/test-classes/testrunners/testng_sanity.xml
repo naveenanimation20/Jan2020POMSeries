@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Hubspot App Sanity Test Suite">
+	<listeners>
+		<!-- <listener class-name="com.qa.hubspot.listeners.pdfListener" /> <listener 
+			class-name="com.qa.hubspot.listeners.ExtentReportListener" /> -->
+
+
+		<!-- <listener class-name="com.qa.hubspot.listeners.TestAllureListener" 
+			/> -->
+		<!-- <listener class-name="com.qa.hubspot.listeners.ScreenshotListener" 
+			/> -->
+
+		<listener class-name="com.qa.hubspot.listeners.TesultsListener" />
+
+
+	
+	</listeners>
+
+
+	<test name="Regression Functional Sanity Test" verbose="2">
+		<classes>
+			<class name="com.qa.hubspot.tests.LoginPageTest" />
+<!-- 			<class name="com.qa.hubspot.tests.HomePageTest" />
+ -->
+		</classes>
+	</test>
+
+
+</suite> 
