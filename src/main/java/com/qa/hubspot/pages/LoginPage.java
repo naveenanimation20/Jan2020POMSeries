@@ -22,6 +22,7 @@ public class LoginPage extends BasePage {
 	By login = By.id("loginBtn");
 	By signup = By.linkText("Sign up");
 	By errorMesg = By.cssSelector("h5.private-alert__title");
+	By random = By.id("random");
 
 	// 2. Constructor of page class:
 	public LoginPage(WebDriver driver) {
