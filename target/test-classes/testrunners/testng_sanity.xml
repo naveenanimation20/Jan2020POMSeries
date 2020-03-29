@@ -3,19 +3,13 @@
 
 <suite name="Hubspot App Sanity Test Suite">
 	<listeners>
-		<!-- <listener class-name="com.qa.hubspot.listeners.pdfListener" /> <listener 
-			class-name="com.qa.hubspot.listeners.ExtentReportListener" /> -->
-
-
-		<!-- <listener class-name="com.qa.hubspot.listeners.TestAllureListener" 
-			/> -->
-		<!-- <listener class-name="com.qa.hubspot.listeners.ScreenshotListener" 
-			/> -->
-
+<!-- 		<listener class-name="com.qa.hubspot.listeners.pdfListener" /> 
+ -->		
+<!-- 		<listener class-name="com.qa.hubspot.listeners.ScreenshotListener" />
+ -->
+ 		<!-- <listener class-name="com.qa.hubspot.listeners.ExtentReportListener" />
+		<listener class-name="com.qa.hubspot.listeners.TestAllureListener" /> -->
 		<listener class-name="com.qa.hubspot.listeners.TesultsListener" />
-
-
-	
 	</listeners>
 
 

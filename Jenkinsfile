@@ -14,6 +14,9 @@ pipeline {
 stage('reports') {
     steps {
     script {
+    
+    
+    
             allure([
                     includeProperties: false,
                     jdk: '',
@@ -21,6 +24,7 @@ stage('reports') {
                     reportBuildPolicy: 'ALWAYS',
                     results: [[path: '/allure-results']]
             ])
+           
             
             // publish html
         		publishHTML([
