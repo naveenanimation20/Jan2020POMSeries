@@ -4,19 +4,19 @@ pipeline {
     maven 'M3'
   }
   stages {
-    stage('Build') {
+    stage('Build Dev') {
       steps {
         sh 'mvn clean test'
       }
     }
     
-    stage('Build') {
+    stage('Build QA') {
       steps {
         sh 'mvn clean test -Denv=qa'
       }
     }
     
-    stage('Build') {
+    stage('Build Stage') {
       steps {
         sh 'mvn clean test -Denv=stg'
       }
