@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('Build Dev') {
           steps {
-            sh 'mvn clean test'
+            sh 'mvn clean install -DskipTests=true'
           }
         }
 
@@ -28,7 +28,7 @@ pipeline {
       parallel {
         stage('Build QA') {
           steps {
-            sh 'mvn clean test -Denv=qa'
+            sh 'mvn clean install -DskipTests=true'
           }
         }
 
@@ -51,7 +51,7 @@ pipeline {
       parallel {
         stage('Build Stage') {
           steps {
-            sh 'mvn clean test -Denv=stg'
+            sh 'mvn clean install -DskipTests=true'
           }
         }
 
