@@ -11,13 +11,13 @@ pipeline {
 
         stage('chrome') {
           steps {
-            sh 'mvn clean test -Denv=qa'
+            sh 'mvn test -Denv=qa -Dbrowser=chrome'
           }
         }
 
         stage('firefox') {
           steps {
-            sh 'mvn clean test -Denv=qa'
+            sh 'mvn test -Denv=qa -Dbrowser=firefox'
           }
         }
 
@@ -34,13 +34,13 @@ pipeline {
 
         stage('chrome') {
           steps {
-            sh 'mvn clean test -Denv=qa'
+            sh 'mvn test -Denv=qa -Dbrowser=chrome'
           }
         }
 
         stage('firefox') {
           steps {
-            sh 'mvn clean test -Denv=qa'
+            sh 'mvn test -Denv=qa -Dbrowser=firefox'
           }
         }
 
@@ -57,13 +57,13 @@ pipeline {
 
         stage('firefox') {
           steps {
-            sh 'mvn clean test -Denv=qa'
+            sh 'mvn test -Denv=qa -Dbrowser=firefox'
           }
         }
 
         stage('chrome') {
           steps {
-            sh 'mvn clean test -Denv=qa'
+            sh 'mvn test -Denv=qa -Dbrowser=chrome'
           }
         }
 
