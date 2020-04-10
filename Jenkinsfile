@@ -9,6 +9,18 @@ pipeline {
         sh 'mvn clean test'
       }
     }
+    
+    stage('Build') {
+      steps {
+        sh 'mvn clean test -Denv=qa'
+      }
+    }
+    
+    stage('Build') {
+      steps {
+        sh 'mvn clean test -Denv=stg'
+      }
+    }
   
   
 stage('reports') {

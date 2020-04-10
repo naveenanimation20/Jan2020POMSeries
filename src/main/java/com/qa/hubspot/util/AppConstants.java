@@ -10,7 +10,6 @@ public class AppConstants {
 
 	public static final String CONTACTS_PAGE_TITLE = "Contacts";
 
-	
 	public static final String CONTACTS_SHEET_NAME = "contacts";
 
 	

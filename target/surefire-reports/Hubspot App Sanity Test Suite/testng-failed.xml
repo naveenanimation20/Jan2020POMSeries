@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Hubspot App Sanity Test Suite]">
+  <listeners>
+    <listener class-name="com.qa.hubspot.listeners.TesultsListener"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="Regression Functional Sanity Test(failed)">
+    <classes>
+      <class name="com.qa.hubspot.tests.LoginPageTest">
+        <methods>
+          <include name="verifyLoginPageTitleTest"/>
+          <include name="setUp"/>
+          <include name="verifySignUpLinkTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
+    </classes>
+  </test> <!-- Regression Functional Sanity Test(failed) -->
+</suite> <!-- Failed suite [Hubspot App Sanity Test Suite] -->
