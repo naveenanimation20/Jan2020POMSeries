@@ -50,14 +50,14 @@ public class LoginPageTest {
 		Assert.assertEquals(title, AppConstants.LOGIN_PAGE_TITLE);
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1, enabled=false)
 	@Description("verify SignUp Link Test")
 	@Severity(SeverityLevel.CRITICAL)
 	public void verifySignUpLinkTest() {
 		Assert.assertTrue(loginPage.verifySignUpLink());
 	}
 
-	@Test(priority = 3, description = "verify app login test")
+	@Test(priority = 3, description = "verify app login test", enabled=false)
 	@Description("verify app login Test")
 	@Severity(SeverityLevel.BLOCKER)
 	public void loginTest() {
