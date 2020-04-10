@@ -39,7 +39,15 @@ public class BasePage {
 	 * @return this method will return driver instance
 	 */
 	public WebDriver init_driver(Properties prop) {
-		String browserName = prop.getProperty("browser");
+		String browserName = null;
+		if (System.getProperty("browser") == null) {
+			browserName = prop.getProperty("browser");
+		} else {
+			browserName = System.getProperty("browser");
+		}
+
+		System.out.println("Running on ----> " + browserName + " browser");
+
 		optionsManager = new OptionsManager(prop);
 
 		if (browserName.equalsIgnoreCase("chrome")) {
@@ -77,8 +85,7 @@ public class BasePage {
 			env = System.getProperty("env");
 			if (env == null) {
 				path = "./src/main/java/com/qa/hubspot/config/config.properties";
-			} 
-			else {
+			} else {
 				switch (env) {
 				case "qa":
 					path = "./src/main/java/com/qa/hubspot/config/config.qa.properties";
