@@ -15,18 +15,6 @@ pipeline {
           }
         }
 
-        stage('firefox') {
-          steps {
-            sh 'mvn test -Denv=qa -Dbrowser=firefox'
-          }
-        }
-
-        stage('safari') {
-          steps {
-            sh 'mvn test -Denv=qa -Dbrowser=safari'
-          }
-        }
-
       }
     }
 
@@ -47,12 +35,6 @@ pipeline {
         stage('firefox') {
           steps {
             sh 'mvn test -Denv=qa -Dbrowser=firefox'
-          }
-        }
-
-        stage('safari') {
-          steps {
-            sh 'mvn test -Denv=qa -Dbrowser=safari'
           }
         }
 
