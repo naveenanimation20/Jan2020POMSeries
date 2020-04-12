@@ -1,8 +1,8 @@
 pipeline {
   agent any
   stages {
-    stage('Build Dev') {
-      parallel {
+  
+  
         stage('Build Dev') {
           steps {
             sh 'mvn clean install -DskipTests=true'
@@ -15,8 +15,8 @@ pipeline {
           }
         }
 
-      }
-    }
+      
+    
 
     stage('Publish reports') {
       steps {
