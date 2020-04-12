@@ -8,6 +8,14 @@ pipeline {
             sh 'mvn clean install -DskipTests=true'
           }
         }
+        
+        stage('SonarQube Test') {
+            steps {
+              echo 'Initiating SonarQube test'
+              sh 'mvn sonar:sonar -Dsonar.host.url=http://http://localhost:9000 -Dlicense.skip=true'
+              echo 'SonarQube test Complete'
+            }
+          }
 
         stage('chrome') {
           steps {
