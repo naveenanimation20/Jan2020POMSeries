@@ -30,7 +30,8 @@ public class BasePage {
 	public static synchronized WebDriver getDriver() {
 		return tlDriver.get();
 	}
-
+	
+	
 	/**
 	 * This method is used to initialize the WebDriver on the basis of
 	 * browserName
