@@ -1,8 +1,6 @@
 pipeline {
   agent any
   stages {
-    
-    
     stage('Build Dev') {
       parallel {
         stage('Build Dev') {
@@ -19,22 +17,21 @@ pipeline {
 
       }
     }
-    
+
     stage('Publish reports') {
-           steps {
-                script {
-                    allure([
-                        includeProperties: false,
-                        jdk: '',
-                        properties: [],
-                        reportBuildPolicy: 'ALWAYS',
-                        results: [[path: '/allure-results']]
-                    ])
-                }
-            }
+      steps {
+        script {
+          allure([
+            includeProperties: false,
+            jdk: '',
+            properties: [],
+            reportBuildPolicy: 'ALWAYS',
+            results: [[path: '/allure-results']]
+          ])
         }
-    
-    
+
+      }
+    }
 
   }
   tools {
