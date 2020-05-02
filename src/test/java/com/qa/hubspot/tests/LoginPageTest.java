@@ -82,7 +82,6 @@ public class LoginPageTest {
 
 	@AfterTest
 	public void tearDown() {
-		System.out.println("closing the browser");
 		driver.quit();
 	}
 
