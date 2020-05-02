@@ -17,8 +17,7 @@
 	<test name="Regression Functional Sanity Test" verbose="2">
 		<classes>
 			<class name="com.qa.hubspot.tests.LoginPageTest" />
-<!-- 			<class name="com.qa.hubspot.tests.HomePageTest" />
- -->
+ 
 		</classes>
 	</test>
 
