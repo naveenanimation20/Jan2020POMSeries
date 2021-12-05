@@ -81,6 +81,6 @@ pipeline {
 
   }
   tools {
-    maven 'M2'
+    maven 'M3'
   }
 }
